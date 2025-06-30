@@ -95,6 +95,7 @@ export async function getNotificationResponse({page = 1, maxItems = 100, lastMod
 
 	if (onlyParticipating) {
 		parameters.participating = onlyParticipating;
+		parameters.org = 'telemetry';
 	}
 
 	if (lastModified) {
