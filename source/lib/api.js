@@ -15,7 +15,7 @@ export async function getGitHubOrigin() {
 
 export async function getTabUrl() {
 	const {onlyParticipating} = await optionsStorage.getAll();
-	const useParticipating = onlyParticipating ? '/participating' : '';
+	const useParticipating = onlyParticipating ? '?query=reason%3Aparticipating+org%3Atelemetry++' : '';
 
 	return `${await getGitHubOrigin()}/notifications${useParticipating}`;
 }
